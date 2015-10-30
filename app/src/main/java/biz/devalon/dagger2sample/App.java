@@ -4,27 +4,20 @@ import android.app.Application;
 import biz.devalon.dagger2sample.components.AppComponent;
 import biz.devalon.dagger2sample.components.DaggerAppComponent;
 import biz.devalon.dagger2sample.modules.AppModule;
-import biz.devalon.dagger2sample.utils.Logger;
-import javax.inject.Inject;
+import timber.log.Timber;
 
 /**
  * Created by ichiwa on 2015/10/29.
  */
 public class App extends Application {
 
-    public static AppComponent mAppComponent;
-
-    @Inject
-    Logger mLogger;
+    public static AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        mAppComponent = DaggerAppComponent.builder().appModule(new AppModule()).build();
-        mAppComponent.inject(this);
-
-        mLogger.log("Hello World !!");
-
+        appComponent = DaggerAppComponent.builder().appModule(new AppModule()).build();
+        appComponent.inject(this);
+        Timber.plant(new Timber.DebugTree());
     }
 }

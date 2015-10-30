@@ -20,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mMainActivityComponent = DaggerMainActivityComponent.builder().mainActivityModule(new MainActivityModule(this)).build();
+        mMainActivityComponent = DaggerMainActivityComponent
+            .builder()
+            .mainActivityModule(new MainActivityModule(this))
+            .build();
         mMainActivityComponent.inject(this);
     }
 }
