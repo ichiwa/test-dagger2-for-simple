@@ -1,4 +1,4 @@
-package biz.devalon.dagger2sample.libs;
+package biz.devalon.dagger2sample.libs.JSONConverter;
 
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;

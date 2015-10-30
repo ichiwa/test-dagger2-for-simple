@@ -17,7 +17,6 @@
                 android:text="click"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
-
         <TextView
                 android:background="#000"
                 android:textColor="#fff"

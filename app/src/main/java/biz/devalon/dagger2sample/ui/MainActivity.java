@@ -8,7 +8,7 @@ import biz.devalon.dagger2sample.components.DaggerMainActivityComponent;
 import biz.devalon.dagger2sample.components.HasComponent;
 import biz.devalon.dagger2sample.components.MainActivityComponent;
 import biz.devalon.dagger2sample.modules.MainActivityModule;
-import biz.devalon.dagger2sample.presenter.MainActivityPresenter;
+import biz.devalon.dagger2sample.presenters.MainActivityPresenter;
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity implements HasComponent<MainActivityComponent> {

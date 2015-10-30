@@ -1,11 +1,13 @@
-package biz.devalon.dagger2sample.presenter;
+package biz.devalon.dagger2sample.presenters;
 
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import biz.devalon.dagger2sample.R;
 import biz.devalon.dagger2sample.apis.WeatherApiGenerator;
 import biz.devalon.dagger2sample.ui.MainActivity;
+import biz.devalon.dagger2sample.utils.StringUtils;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -36,6 +38,7 @@ public class MainActivityPresenter extends Presenter {
         this.mMainActivity = activity;
         this.mView = mMainActivity.findViewById(android.R.id.content);
         ButterKnife.bind(this, mView);
+        mResult.setMovementMethod(ScrollingMovementMethod.getInstance());
     }
 
     @OnClick(R.id.button)
@@ -49,7 +52,7 @@ public class MainActivityPresenter extends Presenter {
             @Override
             public void onResponse(Response<JSONObject> response, Retrofit retrofit) {
                 if (response.isSuccess()) {
-                    renderResult(response.body().toString());
+                    renderResult(StringUtils.toPrettyFormat(response.body().toString()));
                 } else {
                     renderResult(response.errorBody().toString());
                 }
@@ -60,7 +63,6 @@ public class MainActivityPresenter extends Presenter {
                 renderResult(t.getMessage());
             }
         });
-
     }
 
     public void renderResult(String text) {

@@ -1,6 +1,6 @@
 package biz.devalon.dagger2sample.apis;
 
-import biz.devalon.dagger2sample.libs.JSONConverterFactory;
+import biz.devalon.dagger2sample.libs.JSONConverter.JSONConverterFactory;
 import java.util.Map;
 import org.json.JSONObject;
 import retrofit.Call;
