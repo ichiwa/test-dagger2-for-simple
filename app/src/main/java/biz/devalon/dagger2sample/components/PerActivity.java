@@ -1,4 +1,4 @@
-package biz.devalon.dagger2sample.utils;
+package biz.devalon.dagger2sample.components;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

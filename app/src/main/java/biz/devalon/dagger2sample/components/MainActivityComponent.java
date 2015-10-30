@@ -2,7 +2,6 @@ package biz.devalon.dagger2sample.components;
 
 import biz.devalon.dagger2sample.modules.MainActivityModule;
 import biz.devalon.dagger2sample.ui.MainActivity;
-import biz.devalon.dagger2sample.utils.PerActivity;
 import dagger.Component;
 
 /**
