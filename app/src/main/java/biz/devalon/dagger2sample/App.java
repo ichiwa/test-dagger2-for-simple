@@ -1,10 +1,10 @@
 package biz.devalon.dagger2sample;
 
 import android.app.Application;
-import biz.devalon.dagger2sample.components.AppComponent;
-import biz.devalon.dagger2sample.components.DaggerAppComponent;
-import biz.devalon.dagger2sample.modules.AppModule;
-import biz.devalon.dagger2sample.components.HasComponent;
+import biz.devalon.dagger2sample.dagger.components.AppComponent;
+import biz.devalon.dagger2sample.dagger.components.DaggerAppComponent;
+import biz.devalon.dagger2sample.dagger.modules.AppModule;
+import biz.devalon.dagger2sample.dagger.components.HasComponent;
 import timber.log.Timber;
 
 /**
